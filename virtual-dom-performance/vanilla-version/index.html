@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual DOM Performance</title>
+</head>
+<body>
+  <h1 id="title">Original Title</h1>
+  <button onclick="changeTitle()">Change Title (Vanilla JS)</button>
+  <p>DOM Updates: <span id="count">0</span></p>
+
+  <script>
+    let updateCount = 0;
+
+    function changeTitle() {
+      const titleElement = document.getElementById("title");
+      titleElement.textContent = "Title changed using Vanilla JS";
+      
+      updateCount++;
+      document.getElementById("count").textContent = updateCount;
+    }
+  </script>
+</body>
+</html>
